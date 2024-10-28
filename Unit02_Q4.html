@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 4</title>
+
+    <!-- Create a Movie class in JavaScript that has the following properties: title, director, genre, 
+    rating and year. Then create three Movie objects and assign values to their properties. 
+
+    Finally, calculate the average ratings for the three movies and display the results to the console.
+
+    Hint: Make use of array to store the movie objects, to calculate the average ratings, you can 
+    loop through the array and calculate the average using the formula sum of 
+    all ratings / number of movies.
+
+    Can you think of any useful method to be included for the Movie class? -->
+
+    <script>
+
+        class Movie {
+            constructor(title, director, genre, rating, year){
+                this.title = title;
+                this.director = director;
+                this.genre = genre;
+                this.rating = parseFloat(rating);
+                this.year = year;
+            }
+        }
+
+        const movies = [
+            new Movie("CaptainPunch", "Director 1", "Action", "9", "1999"),
+            new Movie("FunnyMovieName", "Director 2", "Comedy", "8", "2000"),
+            new Movie("October 31st", "Director 3", "Horror", "7", "2001")
+        ];
+        
+        let totalRating = 0;
+        for(let movie of movies){
+            totalRating += movie.rating;
+        }
+
+        let averageRating = totalRating / movies.length;
+
+        console.log("Average Rating of Movies:", averageRating);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

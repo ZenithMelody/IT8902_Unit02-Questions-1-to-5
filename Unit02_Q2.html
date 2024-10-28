@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 2</title>
+
+    <!-- Write a JavaScript program that prompts user to enter the value of his/her name 
+    and year of birth, computes the age and displays the output -->
+
+    <script>
+
+        let name = prompt("Name?");
+        let birth = prompt("Year of Birth?");
+
+        let currentYear = new Date().getFullYear(); // googled this, not really sure on the: Use the Date object to get the current year.
+
+        let age = currentYear - birth;
+
+        alert(`Name: ${name}\n Birth Year: ${birth}\n Age: ${age}`);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

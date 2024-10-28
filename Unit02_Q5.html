@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 5</title>
+
+    <!-- You are to create a program to generate an array of random numbers and then find the 
+    highest number in the array. To do this, you are required to write two 
+    functions: getRandomNumber(size) and findMax(arr).
+
+    getRandomNumber(size) should take in a parameter size which determines the length of the array 
+    to be generated. The function should generate an array of random numbers (1 to 100, inclusive) 
+    using the Math.random() function, and should return this array.
+
+    findMax(arr) should take in an array as a parameter, and should return the highest number in 
+    the array. You are not allowed to use any predefine JavaScript function, and will need to 
+    iterate through the array using a loop, comparing each element to determine the highest number 
+    and return it.
+
+    Once you have written these two functions, use them to find the highest number in an array of 
+    15 random numbers. To do this, you can call the getRandomNumber(size) function with a value 
+    for size, and then pass the resulting array to the findMax(arr) function. Finally, you are 
+    to display the array of numbers and the highest number found to the console using console.log(). -->
+
+    <script>
+
+        function getRandomNumber(size){
+            let random100 = [];
+            for(let i = 0; i < size; i++){
+                let randomNum = Math.floor(Math.random() * 100);
+                random100.push(randomNum);
+            }
+            return random100;
+        }
+
+        function findMax(arr){
+            let maxNum = arr[0];
+            for (let i = 1; i < arr.length; i++){
+                if(arr[i] > maxNum){
+                    maxNum = arr[i];
+                }
+            }
+            return maxNum;
+        }
+
+        let randomArray = getRandomNumber(15);
+
+        let highestNumber = findMax(randomArray);
+
+        console.log("Random 15 numbers:", randomArray);
+        console.log("Highest:", highestNumber);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

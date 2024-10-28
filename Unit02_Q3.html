@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 3</title>
+
+    <!-- Create a Circle object that simulates a Circle. You should:
+
+    1. Write a constructor method that allows you to initialize the radius of a Circle.
+
+    2. Write the method getArea() which returns the circle's area. You should use the constant PI from the Math class.
+
+    3. Create an instance of Circle named circle1 with radius of 2.
+
+    4. Display the radius and area of circle1 using the alert dialog box.
+
+    5. Modify the size of circle1 to radius 3.
+
+    6. Display the new radius and area of circle1 using the alert dialog box. -->
+
+    <script>
+
+        class Circle{
+            constructor(radius){
+                this.radius = radius;
+            }
+
+            getArea(){
+                return Math.PI * (this.radius ** 2);
+            }
+        }
+
+        let circle1 = new Circle(2);
+        alert(`Radius: ${circle1.radius}\n` + "Area:" + circle1.getArea());
+
+        circle1.radius = 3;
+        alert(`Radius: ${circle1.radius}\n` + "Area:" + circle1.getArea());
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
